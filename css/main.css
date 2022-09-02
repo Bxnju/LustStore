@@ -16,7 +16,7 @@
 }
 
 ::selection{
-	background: var(--dark-green);
+	background: var(--shadow);
 	color: var(--white);
 }
 
@@ -89,8 +89,12 @@ footer{
 footer .footer__top{
 	display: flex;
 	flex-direction: row;
-	justify-content: space-around;
+	justify-content: space-between;
 	align-items: center;
+}
+
+footer .footer__top .acceso_rapido{
+	width: 30%;
 }
 
 footer .footer__top .acceso_rapido h2{
@@ -108,6 +112,10 @@ footer .footer__top .acceso_rapido li{
 footer .footer__top .acceso_rapido li a{
 	text-decoration: none;
 	color: var(--light-green);
+}
+
+footer .redes{
+	width: 30%;
 }
 
 footer .footer__top .redes .red{
@@ -159,13 +167,71 @@ footer .footer__top .redes .red a:hover::before{
 	opacity: 1;
 }
 
+footer .footer__top .newsletter{
+	display: flex;
+	flex-direction: column;
+	padding: 0.5em 1em;
+	background: var(--w-green);
+	width: 25%;
+	font-family: var(--crimson);
+	box-shadow: 7px 7px 0 var(--light-green);
+
+}
+
+.newsletter h2{
+	color: var(--dark-green);
+	align-self: center;
+}
+
+.newsletter h6{
+	font-family: var(--raleway);
+	color: var(--black);
+	align-self: center;
+	text-align: center;
+}
+
+.newsletter input[type="email"]{
+	border-radius: 1em;
+	margin-top: 0.8em;
+	border: none;
+	outline: none;
+	padding: 0.2em 1em;
+	font-family: var(--raleway);
+	font-weight: bold;
+	background: var(--dark-green);
+	color: var(--white);
+}
+
+.newsletter input[type="email"]::placeholder{
+	color: var(--white);
+}
+
+.newsletter a{
+	margin: 1em 0;
+	background: var(--dark-green);
+	display: flex;
+	text-decoration: none;
+	color: var(--w-green);
+	font-family: var(--crimson);
+	font-weight: 700;
+	align-self: center;
+	padding: .5em;
+	box-shadow: 5px 5px 0 var(--light-green);
+}
+
 footer .footer__bottom .copy{
 	font-family: var(--crimson);
 	padding-top: 0.5em;
 	text-align: center;
 	color: var(--w-green);
-} 
+	margin-top: 2em;
+	border-top: 4px solid var(--w-green);
+	border-radius: 1em;
+}
 
+.clearfix{
+	clear: both;
+}
 
 /*ANIMACIONES*/
 
