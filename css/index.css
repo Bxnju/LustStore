@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&family=Raleway:wght@300;500;700;800&display=swap');
+
+:root{
+
+	--crimson: 'Crimson Text', serif;
+	--raleway: 'Raleway', sans-serif;
+
+	--light-green: #A6C4B1;
+	--dark-green: #486F57;
+	--green: #558869;
+	--white: #fff;
+	--black: #000;
+	--shadow: rgba(0, 0, 0, .3);
+	
+}
+
+.main{
+	height: 80vh;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 2em;
+	cursor: default;
+}
+
+.main .left{
+	padding: 0 5em;
+	font-size: 2em;
+	font-family: var(--raleway);
+	transition: .4s;
+	animation: aparecer_izq 1s ease-in;
+}
+
+.main .left h2{
+	line-height: 1em;
+}
+
+.main .left h2 span{
+	font-family: var(--crimson);
+	color: var(--green);
+	transition: .4s;
+}
+
+.main .left h2 span:hover{
+	color: var(--dark-green);
+	text-shadow: 0 0 1em var(--light-green);
+}
+
+.main .left p{
+	margin-top: 1em;
+	font-size: 0.7em;
+	font-family: var(--raleway);
+	color: var(--dark-green);
+	transition: .4s;
+}
+
+.main .right{
+	padding: 0 2em 0 0;
+}
+
+.main .right img{
+	display: inline-block;
+	width: 450px;
+	transform: rotate(5deg);
+	transition: .5s;
+	animation: aparecer 1s ease-out;
+}
