@@ -203,20 +203,7 @@ footer .footer__top .newsletter{
 }
 
 .newsletter input[type="email"]::placeholder{
-	color: var(--white);
-}
-
-.newsletter a{
-	margin: 1em 0;
-	background: var(--dark-green);
-	display: flex;
-	text-decoration: none;
-	color: var(--w-green);
-	font-family: var(--crimson);
-	font-weight: 700;
-	align-self: center;
-	padding: .5em;
-	box-shadow: 5px 5px 0 var(--light-green);
+	color: rgba(255, 255, 255, .6);
 }
 
 footer .footer__bottom .copy{
@@ -231,6 +218,25 @@ footer .footer__bottom .copy{
 
 .clearfix{
 	clear: both;
+}
+
+.btn_1{
+	margin: 1em 0;
+	background: var(--dark-green);
+	display: flex;
+	text-decoration: none;
+	color: var(--w-green);
+	font-family: var(--crimson);
+	font-weight: 700;
+	align-self: center;
+	padding: .5em;
+	box-shadow: 5px 5px 0 var(--light-green);
+	transition: .4s;
+}
+
+.btn_1:hover{
+	transform: translate(5px, 5px);
+	box-shadow: none;
 }
 
 /*ANIMACIONES*/

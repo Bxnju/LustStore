@@ -6,13 +6,13 @@
 	<link rel="icon" type="img/png" href="./imgs/icono.png">
 
 	<!-- CSS -->
-	<link rel="stylesheet" type="text/css" href="./css/index.css">
+	<link rel="stylesheet" type="text/css" href="./css/contactanos.css">
 	<link rel="stylesheet" type="text/css" href="./css/main.css">
 
 	<!-- Font-Awesome -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 
-	<title>Inicio | Lust Store</title>
+	<title>Contacto | Lust Store</title>
 </head>
 <body>
 
@@ -25,24 +25,16 @@
 		<img src="./imgs/logo.png" draggable="false">
 	</div>
 	<div class="links">
-		<a href="index.html" class="active">Inicio</a>
+		<a href="index.html">Inicio</a>
 		<a href="catalogo.html">Catalogo</a>
 		<a href="nosotros.html">Sobre Nosotros</a>
-		<a href="contactanos.html">Contactanos</a>
+		<a href="contactanos.html" class="active">Contactanos</a>
 	</div>
 </nav>
 
-<div class="clearfix"></div>
 
-<main class="main">
-	<div class="left">
-		<h2>La <span>CALIDAD</span> y las <span>COSTURAS</span> son lo que nos diferencia! </h2>
-		<p>Nuestros altos estandares de calidad en la fabricación y revisión de la prenda antes de la venta, es nuestra identidad.</p>
-	</div>
-	<div class="right">
-		<img src="./imgs/camisetas_negras.png">
-	</div>
-</main>
+
+Error 404 de Prueba
 
 
 

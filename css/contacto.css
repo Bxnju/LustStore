@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&family=Raleway:wght@300;500;700;800&display=swap');
+
+:root{
+
+	--crimson: 'Crimson Text', serif;
+	--raleway: 'Raleway', sans-serif;
+
+	--light-green: #A6C4B1;
+	--dark-green: #486F57;
+	--green: #558869;
+	--w-green: #D5FDE5;
+	--white: #fff;
+	--black: #000;
+	--shadow: rgba(0, 0, 0, .3);
+	
+}
+
+::selection{
+	background: var(--shadow);
+	color: var(--white);
+}
+
+::after, ::before{
+	box-sizing: border-box;
+}
