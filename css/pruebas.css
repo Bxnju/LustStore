@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&family=Raleway:wght@300;500;700;800&display=swap');
+
+@import "animaciones.css";
+
+:root{
+
+	--crimson: 'Crimson Text', serif;
+	--raleway: 'Raleway', sans-serif;
+
+	--light-green: #A6C4B1;
+	--dark-green: #486F57;
+	--green: #558869;
+	--w-green: #D5FDE5;
+	--white: #fff;
+	--black: #000;
+	--shadow: rgba(0, 0, 0, .3);
+	
+}
+
+body{
+	background: #fff;
+}
+
+.form_login{
+		padding: 3em 0;
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		min-height: 75vh;
+}
+
+.form{
+	background: var(--dark-green);
+	padding: 3em 2em;
+	display: flex;
+	position: relative;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 50%;
+	box-shadow: 1em 1em 6px var(--light-green);
+}
+
+.form h2{
+	font-family: var(--crimson);
+	font-size: 3em;
+	color: var(--light-green);
+	margin-bottom: 1em;
+}
+
+.form input[type="text"]::placeholder, .form input[type="password"]::placeholder{
+	color: rgba(0, 0, 0, .45);
+	caret-color: red;
+}
+
+.form input[type="text"], .form input[type="password"]{
+	font-family: var(--raleway);
+	font-weight: bold;
+	font-size: 1em;
+	width: 80%;
+	padding: 0.4em 0.4em 0.4em 1em;
+	border-radius: 1em;
+	border: 0;
+	outline: 0;
+	margin: .6em;
+}
+
+.form input[type="submit"]{
+	display: inline;
+	width: 30%;
+	margin-top: 2em;
+	padding: .5em;
+	background: var(--w-green);
+	border: 0;
+	color: var(--dark-green);
+	cursor: pointer;
+	font-size: 1em;
+}

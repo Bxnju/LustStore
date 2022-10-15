@@ -1,7 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&family=Raleway:wght@300;500;700;800&display=swap');
 
-@import "animaciones.css";
-
 :root{
 
 	--crimson: 'Crimson Text', serif;
@@ -24,4 +22,27 @@
 
 ::after, ::before{
 	box-sizing: border-box;
+}
+
+/*ANIMACIONES*/
+
+@keyframes aparecer{
+	0%{
+		opacity: 0;
+		transform: translateX(30px) translateY(-10px);
+	}
+}
+
+@keyframes aparecer_izq{
+	0%{
+		opacity: 0;
+		transform: translateX(-20px);
+	}
+}
+
+@keyframes aparecer_der{
+	0%{
+		opacity: 0;
+		transform: translateX(20px);
+	}
 }

@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&family=Raleway:wght@300;500;700;800&display=swap');
 
+@import "animaciones.css";
+
 :root{
 
 	--crimson: 'Crimson Text', serif;
@@ -24,12 +26,26 @@
 	box-sizing: border-box;
 }
 
+#catalogo{
+	padding: 2em 2em 6em 2em;
+}
+
+.catalogo_title{
+	font-size: 3em;
+	font-family: var(--raleway);
+	color: var(--dark-green);
+	padding: 1em 0 0 2em;
+	margin-bottom: 1.2em;
+	animation: aparecer_izq .4s ease-in;
+}
+
 .div_catalogo{
-	padding: 2em 3em;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-wrap: wrap;
+	gap: 2em;
+	animation: aparecer_der .4s ease-in;
 }
 
 a:has(.card){
@@ -39,8 +55,16 @@ a:has(.card){
 }
 
 .card{
-	width: 13em;
-	padding: 1em;
+	width: 15em;
+	color: var(--white);
+	border-radius: 1em;
+	transform: rotate(0deg);
+	transition: .4s;
+	display: inline-block;
+}
+
+.card:hover{
+	transform: rotate(1deg);
 }
 
 .card_main{
@@ -51,34 +75,56 @@ a:has(.card){
 	overflow: hidden;
 }
 
-.card_main:hover > .card_pop_up{
-	bottom: 0;
-}
-
 .card_image{
 	display: inline;
-	width: 100%;
+	width: 15em;
 	height: 18em;
+	object-fit: cover;
+	transition: .4s;
 }
 
 .card_pop_up{
 	position: absolute;
-	bottom: -2em;
+	height: 1.7em;
+	bottom: 0;
+	transform: translateY(2.7em);
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	text-align: center;
 	color: var(--white);
 	background: rgba(0, 0, 0, .8);
 	width: 100%;
-	padding: 0.2em 0;
+	padding: 0.4em 0;
 	font-family: var(--raleway);
-	transition: .4s;
+	transition: .3s;
 }	
 
-.card_title{
+
+.card_main:hover > .card_pop_up{
+	transform: translateY(.05em);
+}
+
+.card_info{
+	background: var(--green);
+	padding: 1em 2em 1em 2em;
+}
+
+.card_category{
 	font-family: var(--crimson);
-	text-align: center;
-	padding-top: 0.5em;
+}
+
+.card_title{
+	line-height: 1em;
+	padding: .4em 0;
+	font-family: var(--raleway);
+}
+
+.card_autor{
+	font-family: var(--crimson);
 }
 
 .card_price{
-	text-align: center;
+	padding: .5em 0;
+	font-family: var(--raleway);
 }

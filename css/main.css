@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&family=Raleway:wght@300;500;700;800&display=swap');
 
+@import "animaciones.css";
+
 :root{
 
 	--crimson: 'Crimson Text', serif;
@@ -29,6 +31,24 @@
 	padding: 0;
 }
 
+html{
+	scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+html::-webkit-scrollbar:vertical {
+    width: 8px;
+    background: var(--white);
+
+}
+
+html::-webkit-scrollbar-thumb {
+    background-color: var(--dark-green	);
+}
+
 header{
 	height: 2em;
 	background: var(--dark-green);
@@ -40,6 +60,7 @@ header{
 	padding: 0.3em;
 	color: var(--light-green);
 	letter-spacing: .1em;
+
 }
 
 nav{
@@ -49,6 +70,7 @@ nav{
 	justify-content: space-between;
 	padding: 1em 2em;
 	user-select: none;
+
 }
 
 nav .logo img{
@@ -63,10 +85,6 @@ nav .links a{
 	font-size: 1.2em;
 	font-family: var(--raleway);
 	transition: .4s;
-}
-
-nav .links .active{
-	color: var(--white);
 }
 
 nav .links a:hover{
@@ -239,18 +257,108 @@ footer .footer__bottom .copy{
 	box-shadow: none;
 }
 
-/*ANIMACIONES*/
-
-@keyframes aparecer{
-	0%{
-		opacity: 0;
-		transform: translateX(30px) translateY(-10px);
-	}
+.hidden{
+	opacity: 0;
+	filter: blur(3px);
+	transform: translateX(-100%);
+	transition: all 1s;
 }
 
-@keyframes aparecer_izq{
-	0%{
-		opacity: 0;
-		transform: translateX(-20px);
-	}
+.show{
+	opacity: 1;
+	filter: blur(0);
+	transform: translateX(0);
+}
+
+
+
+/*LOADER PAGINA*/
+
+#page-loader{
+	height: 100%;
+	width: 100%;
+	position: fixed;
+	z-index: 10000;
+	background: var(--white);
+	transition: 1s ease;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.ball-loader {
+	width: 35px;
+	display: inline-block;
+	height: 35px;
+	border-radius: 50%;
+	margin: 0 5px;
+	position: relative;
+}
+
+.ball-loader::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: inherit;
+    border-radius: 50%;
+    z-index: -1;
+    animation: ripple 1.5s ease-out infinite;
+}
+
+.ball-loader:first-child {
+    background-color: var(--w-green);
+}
+
+.ball-loader:first-child::before {
+    animation-delay: 0.2s;
+}
+
+.ball-loader:nth-child(2) {
+    background-color: var(--light-green);
+    transform: scale(0.9);
+}
+
+.ball-loader:nth-child(2)::before {
+    animation-delay: 0.4s;
+}
+
+.ball-loader:nth-child(3) {
+    background-color: var(--green);
+    transform: scale(0.8);
+}
+
+.ball-loader:nth-child(3)::before {
+    animation-delay: 0.65;
+}
+
+.ball-loader:nth-child(4) {
+    background-color: var(--dark-green);
+    transform: scale(0.7);
+}
+
+.ball-loader:nth-child(4)::before {
+    animation-delay: 0.8s;
+}
+
+.ball-loader:last-child {
+    background-color: #773+84;
+    transform: scale(0.6);
+
+}
+
+.ball-loader:last-child::before {
+    animation-delay: 1s;
+}
+
+@keyframes ripple {
+    from {
+        opacity: 1;
+        transform: scale(0);
+    }
+
+    to {
+        opacity: 0;
+        transform: scale(3);
+    }
 }
