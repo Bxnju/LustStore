@@ -27,27 +27,20 @@ include('./recursos/loader.php');
  ?>
 
 
-<section id="catalogo">
-	<div class="catalogo_title">
-		Catalogo
-	</div>
-	<div class="div_catalogo">
 		
 <?php 
 
 	include('query/conexion.php');
-	$type
+	$id = $_GET['id'];
 
-	$sql = 'SELECT * FROM productos';
+	$sql = 'SELECT * FROM productos WHERE id = '.$id.'';
 	$result = mysqli_query($conexion,$sql);
-	$mostrar=mysqli_fetch_array($result)
+	$mostrar=mysqli_fetch_array($result);
 
-
+	echo $mostrar['nombre'];
 
 	 ?>
 
-	</div>
-</section>
 
 
 

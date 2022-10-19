@@ -39,7 +39,7 @@ body{
 	justify-content: center;
 	align-items: center;
 	width: 50%;
-	box-shadow: 1em 1em 6px var(--light-green);
+	box-shadow: 0.6em 0.6em 0 var(--light-green);
 }
 
 .form_png{

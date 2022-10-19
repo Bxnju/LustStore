@@ -1,6 +1,6 @@
 //LOADER
 
-
+//Esta en el archivo /recursos/loader.php
 
 //OBSERVER
 
@@ -17,4 +17,6 @@ const observer = new IntersectionObserver((entries) => {
 
 
 const hiddenElements = document.querySelectorAll('.hidden');
+const hiddenLeftElements = document.querySelectorAll('.hidden_left');
 hiddenElements.forEach((el) => observer.observe(el));
+hiddenLeftElements.forEach((el) => observer.observe(el));

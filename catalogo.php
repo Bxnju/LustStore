@@ -68,7 +68,7 @@ include('./recursos/loader.php');
 		echo '
 
 
-		<a href="producto.php?id='.$mostrar['id'].'&">
+		<a href="producto.php?id='.$mostrar['id'].'">
 			<div class="card hidden">
 				<div class="card_main">
 					<img style="color: black;" alt="Imagen '.$mostrar['nombre'].'. Producto numero '.$mostrar['id'].'" class="card_image" src="'.$mostrar['img'].'">
