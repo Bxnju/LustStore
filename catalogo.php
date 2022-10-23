@@ -48,9 +48,9 @@ include('./recursos/loader.php');
 			echo '
 
 
-			<div class="card hidden">
+			<div class="card hidden" style="cursor: not-allowed;">
 				<div class="card_main">
-					<img style="color: black;" alt="Imagen '.$mostrar['nombre'].'. Producto numero '.$mostrar['id'].'" class="card_image" src="'.$mostrar['img'].'">
+					<img style="color: black;" alt="Imagen '.$mostrar['nombre'].'. Producto numero '.$mostrar['id'].'" class="card_image" draggable="false" src="'.$mostrar['img'].'">
 				</div>
 				<div class="card_info">
 					<h5 class="card_category">'.$mostrar['categoria'].'</h5>
@@ -71,7 +71,7 @@ include('./recursos/loader.php');
 		<a href="producto.php?id='.$mostrar['id'].'">
 			<div class="card hidden">
 				<div class="card_main">
-					<img style="color: black;" alt="Imagen '.$mostrar['nombre'].'. Producto numero '.$mostrar['id'].'" class="card_image" src="'.$mostrar['img'].'">
+					<img style="color: black;" draggable="false" alt="Imagen '.$mostrar['nombre'].'. Producto numero '.$mostrar['id'].'" class="card_image" src="'.$mostrar['img'].'">
 					<div class="card_pop_up">
 						<h3>Compra rapida</h3>
 					</div>
@@ -80,7 +80,7 @@ include('./recursos/loader.php');
 					<h5 class="card_category">'.$mostrar['categoria'].'</h5>
 					<h4 class="card_title">'.$mostrar['nombre'].'</h4>
 					<h5 class="card_autor">Por '.$mostrar['marca'].'</h5>
-					<h4 class="card_price">$'.$mostrar['precioPantalla'].' COP</h4>
+					<h4 class="card_price">$'.number_format($mostrar['precio']).' COP</h4>
 				</div>
 			</div>
 		</a>

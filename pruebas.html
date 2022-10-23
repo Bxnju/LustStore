@@ -41,7 +41,51 @@
 <div class="clearfix"></div>
 
 
-
+<div class="center">
+	<div class="p_div hidden">
+			<img class="p_img" src="./imgs/catalogo/camiseta_catalogo_008.jpeg">
+		<div class="p_elements">
+			<div class="p_title">
+				<h1>Camiseta Blanca Nike Logo Grande</h1>
+				<h3>Por Nike</h3>
+			</div>
+			<div class="p_info">
+				<div class="p_size">Tallas: S-M-L-XL</div>
+				<div class="p_color">Color: Negro</div>
+				<div class="p_price">Precio: $70.000 COP</div>
+			</div>
+			<h2 class="f_title">Adquiere este producto:</h2>
+			<form action="./query/comprar_producto.php?id=" method="POST" class="f_product">
+					<input type="text" placeholder="Nombres" name="nombresCliente">
+					<input type="text" placeholder="Apellidos" name="apellidosCliente">
+					<input type="email" placeholder="Correo electronico" name="correo">
+					<input type="number" placeholder="Numero de celular" name="celular">
+					<select name="tipoTarjeta">
+						<option selected disabled>Por favor, seleccione el tipo de tarjeta.</option>
+						<option>BBVA</option>
+						<option>BANCOLOMBIA</option>
+						<option>VISA</option>
+						<option>MASTERCARD</option>
+					</select>
+					<input type="number" placeholder="Numero de Tarjeta" name="numeroTarjeta">
+					<input type="number" style="display: none;" name="idProducto">
+					<input type="text" style="display: none;" name="nombreProducto">
+					<select name="talla">
+						<option selected disabled>Selecciona la talla.</option>
+						<option>S</option>
+						<option>M</option>
+						<option>L</option>
+						<option>XL</option>
+					</select>
+					<input type="text" style="display: none;" name="color">
+					<input type="number" placeholder="Cantidad de Producto. (Disponibles: )" name="cantidad">
+					<input type="number" style="display: none;" name="precioUnitario">
+					<input type="submit" class="btn_2" value="Comprar" name="comprarProducto">
+				
+			</form>
+		</div>
+	</div>
+</div>
 
 
 </body>

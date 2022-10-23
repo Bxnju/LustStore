@@ -257,6 +257,23 @@ footer .footer__bottom .copy{
 	box-shadow: none;
 }
 
+.btn_2{
+	background: var(--w-green);
+	text-align: center;
+	text-decoration: none;
+	color: var(--dark-green);
+	font-family: var(--raleway);
+	font-weight: bold;
+	padding: .5em;
+	box-shadow: 5px 5px 0 var(--green);
+	transition: .4s;
+}
+
+.btn_2:hover{
+	transform: translate(5px, 5px);
+	box-shadow: none;
+}
+
 
 /*LOADER PAGINA*/
 

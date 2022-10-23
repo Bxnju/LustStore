@@ -47,6 +47,16 @@
 	}
 }
 
+@keyframes neon{
+	0%{
+		color: var(--light-green);
+	}50%{
+		color: var(--w-green);
+	}100%{
+		color: var(--light-green);
+	}
+}
+
 .hidden{
 	opacity: 0;
 	filter: blur(3px);
@@ -66,3 +76,4 @@
 	filter: blur(0);
 	transform: translateX(0);
 }
+

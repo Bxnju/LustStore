@@ -131,3 +131,8 @@ input[type="submit"]{
 	cursor: pointer;
 	font-size: 0.95em;
 }
+
+input[type="submit"]:hover{
+	transform: translate(5px, 5px);
+	box-shadow: none;
+}
