@@ -6,7 +6,7 @@
 	<link rel="icon" type="img/png" href="../imgs/icono.png">
 
 	<!-- CSS -->
-	<link rel="stylesheet" type="text/css" href="../css/index.css">
+	<link rel="stylesheet" type="text/css" href="../css/ingresado.css">
 	<link rel="stylesheet" type="text/css" href="../css/main.css">
 
 	<!-- JAVASCRIPT -->
@@ -30,8 +30,7 @@ include('../recursos/loader.php');
 
 
 
-
-
+<div class="imagen"></div>
 
 </body>
 

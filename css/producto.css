@@ -93,7 +93,7 @@
 	flex-wrap: wrap;
 }
 
-input{
+.f_product input{
 	width: 40%;
 	margin: 0.7em 1em;
 	padding: 0.6em;
@@ -105,12 +105,12 @@ input{
 	transition: .4s;
 }
 
-input:focus, select:focus{
+.f_product input:focus, .f_product select:focus{
 	transform: translate(5px, 5px);
 	box-shadow: none;
 }
 
-select{
+.f_product select{
 	width: 42.5%;
 	margin: 0.7em 1em;
 	padding: 0.6em;

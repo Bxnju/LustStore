@@ -120,11 +120,14 @@ select{
 	box-shadow: 5px 5px 0 var(--green);
 	font-family: var(--raleway);
 	transition: .4s;
+<<<<<<< Updated upstream
 	color: rgba(0, 0, 0, .6);
 }
 
 select:focus{
 	color: var(--black);
+=======
+>>>>>>> Stashed changes
 }
 
 input[type="submit"]{

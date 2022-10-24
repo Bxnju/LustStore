@@ -56,31 +56,27 @@ include('./recursos/loader.php');
 				<div class="p_price">Precio: $<?php echo number_format($mostrar['precio']) ?> COP</div>
 			</div>
 			<h2 class="f_title">Adquiere este producto:</h2>
-			<form action="./query/comprar_producto.php?id=" method="POST" class="f_product">
-					<input type="text" placeholder="Nombres" name="nombresCliente">
-					<input type="text" placeholder="Apellidos" name="apellidosCliente">
-					<input type="email" placeholder="Correo electronico" name="correo">
-					<input type="number" placeholder="Numero de celular" name="celular">
-					<select name="tipoTarjeta">
+			<form action="./query/comprar_producto.php?id=<?php echo $mostrar['id'] ?>" method="POST" class="f_product">
+					<input type="text" placeholder="Nombres" name="nombresCliente" required>
+					<input type="text" placeholder="Apellidos" name="apellidosCliente" required>
+					<input type="email" placeholder="Correo electronico" name="correo" required>
+					<input type="number" placeholder="Numero de celular" name="celular" required>
+					<select name="tipoTarjeta" required>
 						<option selected disabled>Por favor, seleccione el tipo de tarjeta.</option>
 						<option>BBVA</option>
 						<option>BANCOLOMBIA</option>
 						<option>VISA</option>
 						<option>MASTERCARD</option>
 					</select>
-					<input type="number" placeholder="Numero de Tarjeta" name="numeroTarjeta">
-					<input type="number" style="display: none;" name="idProducto">
-					<input type="text" style="display: none;" name="nombreProducto">
-					<select name="talla">
+					<input type="number" placeholder="Numero de Tarjeta" name="nroTarjeta" required>
+					<select name="talla" required>
 						<option selected disabled>Selecciona la talla.</option>
 						<option>S</option>
 						<option>M</option>
 						<option>L</option>
 						<option>XL</option>
 					</select>
-					<input type="text" style="display: none;" name="color">
-					<input type="number" placeholder="Cantidad de Producto. (Disponibles: <?php echo $mostrar['inventario'] ?>)" name="cantidad">
-					<input type="number" style="display: none;" name="precioUnitario">
+					<input type="number" placeholder="Cantidad de Producto. (Disponibles: <?php echo $mostrar['inventario'] ?>)" name="cantidadProducto" required>
 					<input type="submit" class="btn_2" value="Comprar" name="comprarProducto">
 				
 			</form>
