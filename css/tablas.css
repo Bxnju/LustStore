@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&family=Raleway:wght@300;500;700;800&display=swap');
+
+@import "animaciones.css";
+
+:root{
+
+	--crimson: 'Crimson Text', serif;
+	--raleway: 'Raleway', sans-serif;
+
+	--light-green: #A6C4B1;
+	--dark-green: #486F57;
+	--green: #558869;
+	--white: #fff;
+	--black: #000;
+	--shadow: rgba(0, 0, 0, .3);
+	
+}
+
+.contenedor_tabla{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 2em 0 4em 0;
+	backdrop-filter: blur(4px);
+}
+
+.styled-table { 
+	border-collapse: collapse;
+	font-size: 1em; 
+	min-width: 75%;
+
+	box-shadow: .7em .7em 0 var(--light-green);
+}
+
+.styled-table thead tr { 
+	background-color: var(--dark-green); 
+	color: var(--white); 
+	text-align: middle;
+	font-family: var(--crimson); 
+}
+
+.styled-table th, .styled-table td { 
+	padding: 0.7em 1.4em;
+}
+
+.styled-table tbody tr {
+	border-bottom: 1px solid #dddddd; 
+	font-family: var(--raleway); 
+	background: var(--white);
+	text-align: center;
+} 
+
+.styled-table tbody tr:nth-of-type(even) {
+	background-color: #f3f3f3; 
+}
+
+.styled-table tbody tr td a{
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0.7em;
+	width: 2.3em;
+	border-radius: .3em;
+	color: var(--white);
+	background: var(--green);
+	cursor: pointer;
+}
+
+.styled-table tbody tr td a:nth-of-type(2){
+	background: var(--dark-green);
+	cursor: pointer;
+}  

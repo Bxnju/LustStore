@@ -17,10 +17,10 @@
 		<img src="../imgs/logo.png" draggable="false">
 	</div>
 	<div class="links">
-		<a href="index.php">Home</a>
-		<a href="catalogo.php">Usuarios</a>
-		<a href="nosotros.php">Pedidos</a>
-		<a href="contactanos.php">Productos</a>
+		<a href="ingresado.php">Home</a>
+		<a href="clientes.php">Clientes</a>
+		<a href="pedidos.php">Pedidos</a>
+		<a href="productos.php">Productos</a>
 		<a href="../query/logout.php">Logout</a>
 	</div>
 </nav>
