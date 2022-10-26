@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 26-10-2022 a las 08:58:34
+-- Tiempo de generación: 26-10-2022 a las 17:21:32
 -- Versión del servidor: 10.4.25-MariaDB
 -- Versión de PHP: 8.1.10
 
@@ -56,6 +56,13 @@ CREATE TABLE `clientes` (
   `numeroTarjeta` bigint(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Volcado de datos para la tabla `clientes`
+--
+
+INSERT INTO `clientes` (`id`, `nombres`, `apellidos`, `celular`, `correo`, `tipoTarjeta`, `numeroTarjeta`) VALUES
+(1, 'Juan', 'Ayala', 3006261355, 'juan@gmail.com', 'MASTERCARD', 543453535345);
+
 -- --------------------------------------------------------
 
 --
@@ -69,6 +76,13 @@ CREATE TABLE `contactanos` (
   `correo` varchar(50) NOT NULL,
   `mensaje` longtext NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `contactanos`
+--
+
+INSERT INTO `contactanos` (`id`, `identidad`, `celular`, `correo`, `mensaje`) VALUES
+(1, 'Carlos Centeno Torres', 3006261355, 'Carlos@gmail.com', 'Buenas tardes. Muchas gracias por abrir este canal de comunicación. En el momento estoy empezando un startup y me gustaría tener como aliado a su empresa ya que tengo conocimiento de su éxito y su manera de trabajar. Espero pronta respuesta y de antemano muchas gracias.');
 
 -- --------------------------------------------------------
 
@@ -117,15 +131,15 @@ CREATE TABLE `productos` (
 --
 
 INSERT INTO `productos` (`id`, `categoria`, `nombre`, `marca`, `precio`, `tallas`, `color`, `img`, `inventario`) VALUES
-(1, 'Casual', 'Camiseta Nike Doble Logo Azul', 'Nike', 65000, 'S M L XL', 'Negro', './imgs/catalogo/camiseta_catalogo_001.jpeg', 8),
-(2, 'Casual', 'Camiseta Nike Negra Logo Pequeño', 'Nike', 120000, 'S M L XL', 'Negro', './imgs/catalogo/camiseta_catalogo_002.jpeg', 5),
+(1, 'Casual', 'Camiseta Nike Doble Logo Azul', 'Nike', 75000, 'S M L XL', 'Negro', './imgs/catalogo/camiseta_catalogo_001.jpeg', 10),
+(2, 'Casual', 'Camiseta Nike Negra Logo Pequeño', 'Nike', 120000, 'S M L XL', 'Negro', './imgs/catalogo/camiseta_catalogo_002.jpeg', 2),
 (3, 'Casual', 'Camiseta Blanca Nike Logo Grande', 'Nike', 80000, 'S M L XL', 'Blanco', './imgs/catalogo/camiseta_catalogo_003.jpeg', 5),
 (4, 'Casual', 'Camiseta Nike Blanca Logo Pequeño', 'Nike', 250000, 'S M L XL', 'Blanco', './imgs/catalogo/camiseta_catalogo_004.jpeg', 7),
-(5, 'Casual', 'Camiseta Nike SB Negra ', 'Nike', 120000, 'S M L XL', 'Negro', './imgs/catalogo/camiseta_catalogo_005.jpeg', 5),
+(5, 'Casual', 'Camiseta Nike SB Negra ', 'Nike', 90000, 'S M L XL', 'Negro', './imgs/catalogo/camiseta_catalogo_005.jpeg', 5),
 (6, 'Casual', 'Camiseta Jordan Roja', 'Jordan', 135000, 'S M L XL', 'Rojo', './imgs/catalogo/camiseta_catalogo_006.jpeg', 5),
 (7, 'Casual', 'Camiseta Blanca Nike con Bordado', 'Nike', 110000, 'S M L XL', 'Blanco', './imgs/catalogo/camiseta_catalogo_007.jpeg', 5),
-(8, 'Deportivo', 'Camiseta Nike FC Barcelona', 'Nike', 160000, 'S M L XL', 'Blanco', './imgs/catalogo/camiseta_catalogo_008.jpeg', 5),
-(9, 'Deportivo', 'Camiseta Oficial Paris Saint germain ', 'Nike', 150000, 'S M L XL', 'Blancas', './imgs/catalogo/camiseta_catalogo_009.jpeg', 2),
+(8, 'Deportivo', 'Camiseta Nike FC Barcelona', 'Nike', 180000, 'S M L XL', 'Blanco', './imgs/catalogo/camiseta_catalogo_008.jpeg', 20),
+(9, 'Deportivo', 'Camiseta Oficial Paris Saint germain ', 'Nike', 150000, 'S M L XL', 'Blancas', './imgs/catalogo/camiseta_catalogo_009.jpeg', 0),
 (10, 'Deportivo', 'Camiseta Azul Golden State', 'Nike', 160000, 'S M L XL', 'Azul', './imgs/catalogo/camiseta_catalogo_010.jpeg', 5),
 (11, 'Casual', 'Camiseta Nike Verde Oliva', 'Nike', 150000, 'S M L XL', 'Verde Oliva', './imgs/catalogo/camiseta_catalogo_011.jpeg', 5),
 (12, 'Deportivo', 'Camiseta Deportiva Logo Azul', 'Nike', 134000, 'S M L XL', 'Blanca', './imgs/catalogo/camiseta_catalogo_012.jpeg', 5);
@@ -179,13 +193,13 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT de la tabla `clientes`
 --
 ALTER TABLE `clientes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de la tabla `contactanos`
 --
 ALTER TABLE `contactanos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `pedidos`
@@ -197,7 +211,7 @@ ALTER TABLE `pedidos`
 -- AUTO_INCREMENT de la tabla `productos`
 --
 ALTER TABLE `productos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

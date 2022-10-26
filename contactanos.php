@@ -26,6 +26,25 @@ include('./recursos/loader.php');
 
  ?>
 
+
+
+<div class="form_login">
+	<form class="form" action="./query/enviar_mensaje.php" method="post">
+		<div class="header">
+			<img class="form_png" src="./imgs/icono.png">
+			<h2>Contactanos</h2>
+		</div>
+		<input type="text" placeholder="Nombre *" name="nombre" required>
+		<input type="text" placeholder="Correo *" name="correo" required>
+		<input type="text" placeholder="Celular" name="celular">
+		<textarea name="mensaje" required>Escribe aquí tu mensaje</textarea>
+		<input type="submit" value="Mandar mensaje" class="btn_1" name="enviar_mensaje">
+	</form>
+</div>
+
+
+
+
 </body>
 
 <?php 
@@ -35,3 +54,4 @@ include("./recursos/footer.php");
  ?>
 
 </html>
+

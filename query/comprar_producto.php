@@ -56,9 +56,10 @@ if(isset($_POST['comprarProducto'])){
 			$sqlCliente = "INSERT INTO `clientes` (`nombres`, `apellidos`, `celular`, `correo`, `tipoTarjeta`, `numeroTarjeta`) VALUES ('$nombresCliente', '$apellidosCliente', '$celular', '$correo', '$tipoTarjeta', '$nroTarjeta');";
 			$sqlInventario = "UPDATE `productos` SET `inventario` = '$nuevoInventario' WHERE `productos`.`id` = $id;";
 
-			$runSqlCliente = mysqli_query($conexion, $sqlCliente);
 			$runSqlPedido = mysqli_query($conexion, $sqlPedido);
 			$runSqlInventario = mysqli_query($conexion, $sqlInventario);
+			$runSqlCliente = mysqli_query($conexion, $sqlCliente);
+			
 
 
 
