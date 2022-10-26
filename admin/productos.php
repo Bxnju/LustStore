@@ -1,3 +1,15 @@
+<?php
+    session_start();
+
+    if(!isset($_SESSION['id_admin'])){
+	    echo "<script>
+	    alert('No ha iniciado sesion como administrador del sistema.');
+	    window.location = './login.php';
+	    </script>";
+    }
+
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -63,7 +75,7 @@ include('../recursos/loader.php');
                         <td><?php echo $mostrar['marca'] ?></td>
                         <td><?php echo number_format($mostrar['precio']) ?></td>
                         <td><?php echo $mostrar['inventario'] ?></td>
-                        <td> <a href="actualizar_datos_prenda.php?id=<?php echo $mostrar['id']; ?>" title="Editar"><i class="fa-solid fa-pen-to-square"></i></a>
+                        <td> <a href="act_prenda.php?id=<?php echo $mostrar['id']; ?>" title="Editar"><i class="fa-solid fa-pen-to-square"></i></a>
                             <a title="Eliminar" onClick="eliminarProducto(<?php echo $mostrar['id'] ?>)"><i class="fas fa-trash-alt"></i></a>
                         </td>
                     </tr>
@@ -80,7 +92,7 @@ include('../recursos/loader.php');
 
 <?php 
 
-include("../recursos/footer.php");
+include("footer_admin.php");
 
  ?>
 

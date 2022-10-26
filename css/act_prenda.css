@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&family=Raleway:wght@300;500;700;800&display=swap');
+
+@import "animaciones.css";
+
+:root{
+
+	--crimson: 'Crimson Text', serif;
+	--raleway: 'Raleway', sans-serif;
+
+	--light-green: #A6C4B1;
+	--dark-green: #486F57;
+	--green: #558869;
+	--w-green: #D5FDE5;
+	--white: #fff;
+	--black: #000;
+	--shadow: rgba(0, 0, 0, .3);
+	
+}
+
+.center{
+	min-height: 85vh;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	accent-color: var(--green);
+}
+
+.p_div{
+	display: flex;
+	width: 60%;
+	align-items: center;
+	padding: 2em 6em;
+	background: var(--dark-green);
+	margin: 3em;
+	box-shadow: .7em .7em 0 var(--light-green);
+}
+
+.p_img{
+	display: inline-flex;
+	border: 5px solid var(--light-green);
+	width: 300px;
+}
+
+.p_elements{
+	padding-left: 2em;
+	color: var(--light-green);
+}
+
+.p_title{
+	text-align: center;
+	margin-bottom: 2em;
+	font-size: 1.3em;
+	font-family: var(--crimson);
+}
+
+.p_title h3{
+	font-family: var(--raleway);
+	font-size: inherit;
+}
+
+.p_info{
+	display: flex;
+	gap: 1em;
+	width: 100%;
+	margin: 1em 0 3em 0;
+	padding: 0.7em;
+	font-weight: bold;
+	justify-content: space-evenly;
+	background: var(--green);
+	color: var(--w-green);
+	align-items: center;
+	text-align: center;
+	font-family: var(--raleway);
+}
+
+.f_product{
+	display: flex;
+	width: 100%;
+	flex-direction: row;
+	justify-content: center;
+	flex-wrap: wrap;
+	align-items: center;
+}
+
+.f_title{
+	text-align: center;
+	font-size: 1.7em;
+	font-family: var(--raleway);
+	margin: 1em 0;
+}
+
+.f_inputs{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+input:not([type="checkbox"]){
+	width: 70%;
+	margin: 0.7em 1em;
+	padding: 0.6em;
+	outline: none;
+	border: none;
+	box-shadow: 5px 5px 0 var(--green);
+	font-family: var(--raleway);
+	font-weight: bold;
+	transition: .4s;
+}
+
+input:not([type="checkbox"]):nth-of-type(3){
+	width: 65%;
+}
+
+.f_product input[type="text"]:focus, .f_product input[type="number"]:focus{
+	transform: translate(5px, 5px);
+	box-shadow: none;
+}
+
+.checkbox{
+	margin: 0 0 1em 0;
+}
+
+label{
+	margin: 0 0.5em;
+}
+
+
+input[type="checkbox"]{
+	outline: none;
+	border: none;
+	margin: 0 2em 0 0;
+	box-shadow: none;
+	font-family: var(--raleway);
+	font-weight: bold;
+	transition: .4s;
+	display: inline;
+	transform: scale(1.5);
+}
+
+input[type="submit"]{
+	cursor: pointer;
+	font-size: 0.95em;
+}

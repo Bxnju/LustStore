@@ -1,3 +1,15 @@
+<?php
+    session_start();
+
+    if(!isset($_SESSION['id_admin'])){
+	    echo "<script>
+	    alert('No ha iniciado sesion como administrador del sistema.');
+	    window.location = './login.php';
+	    </script>";
+    }
+
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -62,7 +74,7 @@ include('../recursos/loader.php');
                         <td><?php echo $mostrar['celular'] ?></td>
                         <td><?php echo $mostrar['correo'] ?></td>
                         <td><?php echo $mostrar['tipoTarjeta'] ?></td>
-                        <td> <a href="actualizar_datos_cliente.php?id=<?php echo $mostrar['id']; ?>" title="Editar"><i class="fas fa-user-edit"></i></a>
+                        <td> <a href="act_cliente.php?id=<?php echo $mostrar['id']; ?>" title="Editar"><i class="fas fa-user-edit"></i></a>
                             <a title="Eliminar" onclick="eliminarCliente(<?php echo $mostrar['id'] ?>)">
                             	<i class="fas fa-trash-alt"></i></a>
                         </td>
@@ -80,7 +92,7 @@ include('../recursos/loader.php');
 
 <?php 
 
-include("../recursos/footer.php");
+include("footer_admin.php");
 
  ?>
 

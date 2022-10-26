@@ -1,3 +1,15 @@
+<?php
+    session_start();
+
+    if(!isset($_SESSION['id_admin'])){
+	    echo "<script>
+	    alert('No ha iniciado sesion como administrador del sistema.');
+	    window.location = './login.php';
+	    </script>";
+    }
+
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -143,7 +155,7 @@ include('../recursos/loader.php');
 
 <?php 
 
-include("../recursos/footer.php");
+include("footer_admin.php");
 
  ?>
 

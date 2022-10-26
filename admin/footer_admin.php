@@ -3,12 +3,10 @@
 
 		<div class="acceso_rapido">
 			<h2>Acceso Rapido:</h2>
-			<li>1. <a href="./index.php">Home</a></li>
-			<li>2. <a href="./catalogo.php">Catalogo</a></li>
-			<li>3. <a href="./nosotros.php">Sobre Nosotros</a></li>
-			<li>4. <a href="./contactanos.php">Contactanos</a></li>
-			<li>5. <a href="./admin/login.php">Login</a></li>
-
+			<li>1. <a href="./ingresado.php">Home</a></li>
+			<li>2. <a href="./clientes.php">Clientes</a></li>
+			<li>3. <a href="./pedidos.php">Pedidos</a></li>
+			<li>4. <a href="./productos.php">Productos</a></li>
 		</div>
 
 		<div class="redes">

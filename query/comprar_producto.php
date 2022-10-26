@@ -46,8 +46,8 @@ if(isset($_POST['comprarProducto'])){
 			echo "
 
 			<script>
-				alert('Muchas gracias por confiar en nosotros. A continuacion, un pequeño resumen de la compra...');
-				 window.location = '../resumen_compra.php?name=".$nombresCliente . " " .$apellidoscliente."&totalPrice=".number_format($precioTotal)."&productQuantity=".$cantidadProducto."';
+				alert('Muchas gracias por confiar en nosotros. La compra ha sido realizada con exito y agregada al sistema.');
+				 window.location = '../catalogo.php';
 			</script>
 
 			";

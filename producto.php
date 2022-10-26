@@ -1,3 +1,14 @@
+<?php 
+
+		include('query/conexion.php');
+		$id = $_GET['id'];
+
+		$sql = 'SELECT * FROM productos WHERE id = '.$id.'';
+		$result = mysqli_query($conexion,$sql);
+		$mostrar=mysqli_fetch_array($result);
+
+	 ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,7 +26,7 @@
 	<!-- Font-Awesome -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 
-	<title>Catalogo | Lust Store</title>
+	<title><?php echo $mostrar['nombre'] ?> | Lust Store</title>
 </head>
 <body>
 
@@ -28,16 +39,7 @@ include('./recursos/loader.php');
 
 
 		
-	<?php 
-
-		include('query/conexion.php');
-		$id = $_GET['id'];
-
-		$sql = 'SELECT * FROM productos WHERE id = '.$id.'';
-		$result = mysqli_query($conexion,$sql);
-		$mostrar=mysqli_fetch_array($result);
-
-	 ?>
+	
 
 
 
